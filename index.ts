@@ -7,14 +7,14 @@ export interface DifferenceCreate {
 export interface DifferenceRemove {
 	type: "REMOVE";
 	path: (string | number)[];
-	oldValue: any;
+	// oldValue: any;
 }
 
 export interface DifferenceChange {
 	type: "CHANGE";
 	path: (string | number)[];
 	value: any;
-	oldValue: any;
+	// oldValue: any;
 }
 
 export type Difference = DifferenceCreate | DifferenceRemove | DifferenceChange;
@@ -41,7 +41,7 @@ export default function diff(
 			diffs.push({
 				type: "REMOVE",
 				path: [path],
-				oldValue: obj[key],
+				// oldValue: obj[key],
 			});
 			continue;
 		}
@@ -85,7 +85,7 @@ export default function diff(
 				path: [path],
 				type: "CHANGE",
 				value: newObjKey,
-				oldValue: objKey,
+				// oldValue: objKey,
 			});
 		}
 	}
