@@ -10,7 +10,7 @@
 		"default": "./dist/index.js"
 	},
 	"scripts": {
-		"build": "tsc --module es2020  && npx prettier -w dist/*",
+		"build": "tsc --module NodeNext  && npx prettier -w dist/*",
 		"test": "npm run build && node --test ./tests/*",
 		"bench": "npm run build && node bench.js",
 		"prepublish": "npm run build"
